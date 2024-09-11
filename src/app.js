@@ -7,7 +7,7 @@ import ErrorHandlingMiddleware from './middlewares/error-handling.middleware.js'
 import UsersRouter from './routes/users.router.js';
 import CharacterRouter from './routes/Character.router.js';
 import ItemRouter from './routes/Item.router.js';
-import AuthMiddleware from './middlewares/auth.middleware.js'; // auth 미들웨어 임포트
+import AuthMiddleware from './middlewares/auth.middleware.js';
 
 dotenv.config();
 const app = express();
