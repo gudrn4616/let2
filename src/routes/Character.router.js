@@ -49,7 +49,14 @@ router.post("/CharacterCreate", authMiddleware, async (req, res, next) => {
         },
       });
 
-      return res.status(201).json({ data: { Character, Inventory } });
+      const Equipment = await tx.Equipment.create({
+        data: {
+          characterId: Character.id,
+          items: [],
+        },
+      });
+
+      return res.status(201).json({ data: { Character, Inventory, Equipment } });
     });
 
     return transaction;
